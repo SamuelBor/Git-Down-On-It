@@ -1,18 +1,18 @@
 # Git Down On It: A Cheat Sheet for Essential Git Functions
 ### What is Git?
 
-Git is a **distributed version-control system** (VCS) for tracking changes in source code, first developed in 2005 by Linus Torvalds. It allows collaborative work between software developers, by facilitating independent local branches that can be easily switched between, and a seamless merging process. By encouraging developers to save incremental commits of their code, projects can easily be rolled back to a previous, working version if something goes wrong. 
+Git is a **distributed version-control system** (VCS) for tracking changes in source code, first developed in 2005 by Linus Torvalds. It allows collaborative work between software developers, by facilitating independent local branches that can be easily switched between, and a seamless merging process to combine work. By encouraging developers to save incremental commits of their code, projects can easily be rolled back to a previous, working version if something goes wrong. 
 
-The **distributed** part of Git means that instead of 'checking out' just the current tip of the source code, developers 'clone' an entire repository onto their machines. This means that there is no single point of failure as every user essentially has a full backup of the main server.
+The **distributed** part of Git means that instead of 'checking out' just the current 'tip' of the source code, developers 'clone' an entire repository onto their machines. This means that there is no single point of failure as every user essentially has a full backup of the main server.
 
 There are many companies that offer **remote hosting** of repositories using Git, such as GitHub or GitLab. GitHub provides an expansive web interface to allow users to easily manage access controls, track bugs, request new features and write a 'wiki' page for every repository.
 
 
 ### What is Git Down On It?
 
-There are many graphical implementations of the key Git functions, but the original interface was a command line interface. These terminal commands like these are still very relevant and useful today, which is why Git Down On It was created: to give beginner Git users a solid foundation of the commands they should know/be aware of. 
+There are many graphical implementations of Git, but original interactions were done via a command line interface. These terminal commands are still very relevant and useful today, which is why Git Down On It was created: to give beginner Git users a solid foundation of the commands they should know/be aware of. 
 
-Although this information can be found elsewhere online, we often found ourselves trawling through documentation pages and Stack Overflow answers to find some of the most basic commands. This cheat sheet aims to consolidate this basic information into one, accessible page that can help beginners get started in the world of version control and software development. 
+Although this information can be found elsewhere online, I often found myself trawling through documentation pages and Stack Overflow answers to find some of the most basic commands. This cheat sheet aims to consolidate this basic information into one, accessible page that can help beginners get started in the world of version control and software development. 
 
 
 - - - -
@@ -45,6 +45,10 @@ Although this information can be found elsewhere online, we often found ourselve
 ### Cloning an Existing Repository 
 
 `git clone <repo>` clones the specified repository onto the local machine.
+
+### Copy an Existing Repository for Collaborating on Open Source Projects
+
+**Forking** a repository from a code hosting service such as GitHub copies an existing repository into a new namespace, allowing experimentation and changes to be applied without affecting the original project. These changed can then be contributed back into the original project using a **pull request**. Once forked, use `git clone` to copy the new repository onto your local machine to start collaborating. 
 
 ### Stage Changes for the Next Commit
 
@@ -183,6 +187,10 @@ Although this information can be found elsewhere online, we often found ourselve
 ### Push Latest Local Commits on a Branch to a Remote Repository
 
 `git push <remote> <branch>` pushes the current branch and its files/commits to the specified remote branch. If the specified remote branch does not exist, creates it. 
+
+### Push Latest Local Commits on a Branch to a Remote Repository, Ignoring Git Warnings
+
+`git push <remote> —force` forces the `git push` to go through, even if it results in 'non-fast-forward merge'. **Use with care.**
 
 ### Push Latest Local Commits on All Branches to a Remote Repository
 
