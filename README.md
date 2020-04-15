@@ -58,7 +58,7 @@ Although this information can be found elsewhere online, I often found myself tr
 
 ### Commit the Staged Changes
 
-`git commit —m <message>` saves the staged changes, alongside a descriptive commit message. 
+`git commit -m <message>` saves the staged changes, alongside a descriptive commit message. 
 
 ### List Staged, Unstaged and Untracked Files
 
@@ -72,9 +72,9 @@ Although this information can be found elsewhere online, I often found myself tr
 
 `git log -<limit>` shows a commit history, limited to the most recent <limit> commits.
 
-`git log —oneline` shows the entire commit history, with each commit condensed to a single line.
+`git log --oneline` shows the entire commit history, with each commit condensed to a single line.
 
-`git log —graph —decorate` draws a text based graph of branches and commits.
+`git log --graph --decorate` draws a text based graph of branches and commits.
 
 ### View Changes in Working Directory
 
@@ -88,7 +88,7 @@ Although this information can be found elsewhere online, I often found myself tr
 ## Undoing Mistakes
 ### Alter a Commit 
 
-`git commit —amend -m <message>` replaces the last commit with the staged changes and the last commit combined. If there are no staged changes then this can be used to amend the commit message.
+`git commit --amend -m <message>` replaces the last commit with the staged changes and the last commit combined. If there are no staged changes then this can be used to amend the commit message.
 
 ### Undo a Commit
 
@@ -100,7 +100,7 @@ Although this information can be found elsewhere online, I often found myself tr
 
 ### Remove a File from Staged Area, and Overwrite Changes
 
-`git reset —hard <file>` removes the specified file from the staged area, and **overwrites** changes to the file. 
+`git reset --hard <file>` removes the specified file from the staged area, and **overwrites** changes to the file. 
 
 ### Reset Entire Staging Area to Match Most Recent Commit, Preserve Changes	
 
@@ -108,7 +108,7 @@ Although this information can be found elsewhere online, I often found myself tr
 
 ### Reset Entire Staging Area to Match Most Recent Commit, Overwrite Changes	
 
-`git reset —hard` resets the entire staging area to match the most recent commit, and **overwrites** any changes made to files.	
+`git reset --hard` resets the entire staging area to match the most recent commit, and **overwrites** any changes made to files.	
 
 ### Reset Staging Area to a Previous Commit, but Preserve Working Directory Changes
 
@@ -116,7 +116,7 @@ Although this information can be found elsewhere online, I often found myself tr
 
 ### Reset Staging Area to a Previous Commit, and Overwrite Working Directory Changes
 
-`git reset —hard <commit>` resets the entire staging area to match a specified commit, and **deletes uncommitted changes** and **all commits after the specified commit**.
+`git reset --hard <commit>` resets the entire staging area to match a specified commit, and **deletes uncommitted changes** and **all commits after the specified commit**.
  
 ### Remove Untracked Files from the Working Directory
 
@@ -154,7 +154,7 @@ Although this information can be found elsewhere online, I often found myself tr
 
 ### Delete a Remote Branch
 
-`git push origin —delete <branch_name>` deletes a branch from a remote repository.
+`git push origin --delete <branch_name>` deletes a branch from a remote repository.
 
 ### Merge a Branch into the Active Branch
 
@@ -182,7 +182,7 @@ Although this information can be found elsewhere online, I often found myself tr
 
 ### Fetch Latest Changes from a Remote Repository and Rebase it into Local Copy
 
-`git pull —rebase <remote> <branch_name>`retrieves the remote repository’s copy of the specified branch and rebases it into the local copy. If no branch is specified, pulls and rebases the latest copy of the current branch.
+`git pull --rebase <remote> <branch_name>`retrieves the remote repository’s copy of the specified branch and rebases it into the local copy. If no branch is specified, pulls and rebases the latest copy of the current branch.
 
 ### Push Latest Local Commits on a Branch to a Remote Repository
 
@@ -190,17 +190,17 @@ Although this information can be found elsewhere online, I often found myself tr
 
 ### Push Latest Local Commits on a Branch to a Remote Repository, Ignoring Git Warnings
 
-`git push <remote> —force` forces the `git push` to go through, even if it results in 'non-fast-forward merge'. **Use with care.**
+`git push <remote> --force` forces the `git push` to go through, even if it results in 'non-fast-forward merge'. **Use with care.**
 
 ### Push Latest Local Commits on All Branches to a Remote Repository
 
-`git push <remote> —all` pushes all of your local branches to the specified remote repository.
+`git push <remote> --all` pushes all of your local branches to the specified remote repository.
 
 
 ## Misc. Commands
 ### Update Local List of Remote Branches
 
-`git remote update origin —prune`  fetches and updates remote branches for all remotes.
+`git remote update origin --prune`  fetches and updates remote branches for all remotes.
 
 ### Save Local Changes and Clean Working Directory
 
